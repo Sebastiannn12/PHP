@@ -1,0 +1,101 @@
+:root {
+    --primary-color: #000000;
+    --text-dark: #000000;
+    --text-grey: #000000;
+    --border-color: #000000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f7f6;
+    color: var(--text-dark);
+    line-height: 1.;
+    padding: 40px 0;
+}
+
+.resume-container {
+    background-color: #fff;
+    width: 850px;
+    margin: 0 auto;
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.resume-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.main-divider {
+    border: 0;
+    border-top: 2px solid var(--border-color);
+    margin: 20px 0;
+}
+
+.section {
+    margin-bottom: 35px;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.objective-text {
+    text-align: justify;
+    font-size: 14px;
+}
+
+.two-column {
+    display: flex;
+    gap: 40px;
+}
+
+.column {
+    flex: 1;
+}
+
+/* Bullet Alignment Fix */
+.skills-list {
+    padding-left: 18px; /* Fixed padding for alignment */
+    margin-top: 5px;
+    list-style-type: disc;
+}
+
+.skills-list li {
+    margin-bottom: 4px;
+    font-size: 14px;
+    list-style-position: outside; /* Keeps text from wrapping under bullet */
+}
+
+.entry {
+    margin-bottom: 15px;
+}
+
+.entry strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+.entry p {
+    font-size: 14px;
+}

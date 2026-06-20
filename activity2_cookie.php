@@ -1,10 +1,4 @@
-<?php
-if (!headers_sent()) {
-    setcookie("firstname", "Francis", time() + 10, "/");
-    setcookie("middlename", "Advincula", time() + 20, "/");
-    setcookie("lastname", "Pertudo", time() + 30, "/");
-}
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">

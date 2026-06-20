@@ -1,0 +1,9 @@
+body { background: #f8f9fa; }
+.card { border-radius: 12px; }
+.color-text {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.text-center.mt-4 a.btn { min-width: 100px; }

@@ -1,0 +1,87 @@
+:root {
+    --bg: #f7f7f8;
+    --card-bg: #ffffff;
+    --muted: #6c757d;
+    --text: #111216;
+    --accent: #343a40;
+}
+
+body {
+    background: var(--bg);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: var(--text);
+}
+
+.container.py-5 {
+    max-width: 1100px;
+}
+
+h3.text-center {
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.cards-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    background: var(--card-bg);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card h5 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 6px 14px;
+}
+
+.btn-dark {
+    background-color: #343a40;
+}
+
+.btn-dark:hover {
+    background-color: #212529;
+}
+
+.btn-outline-dark {
+    border-color: #343a40;
+    color: #343a40;
+}
+
+.btn-outline-dark:hover {
+    background-color: #343a40;
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .cards-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cards-row {
+        grid-template-columns: 1fr;
+    }
+}

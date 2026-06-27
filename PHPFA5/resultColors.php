@@ -11,7 +11,6 @@ if (isset($_POST['submit'])) {
     ];
 }
 
-// function to check if color is valid
 function isValidColor($color) {
     $validColors = [
         "red","blue","green","yellow","orange",

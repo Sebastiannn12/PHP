@@ -10,6 +10,14 @@
 
 <div class="container">
 
+<?php if(isset($_GET['success']) && $_GET['success'] == 1){ ?>
+
+    <div class="notification success" style="border:1px solid #4CAF50;padding:12px;margin-bottom:16px;background:#e8f5e9;">
+        <span>Dog registered successfully.</span>
+    </div>
+
+<?php } ?>
+
 <div class="button-row top-row">
     <button type="button" class="secondary-btn" onclick="history.back();">Back</button>
 </div>

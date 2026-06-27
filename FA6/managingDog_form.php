@@ -20,11 +20,10 @@ if(isset($_POST['save'])){
     ('$name','$breed','$age','$address','$color','$height','$weight')";
 
     if(mysqli_query($conn,$sql)){
-        header("Location: dogView.php");
+        header("Location: DogRegister.php?success=1");
+        exit();
     }else{
         echo "Error: ".mysqli_error($conn);
     }
 
 }
-
-?>

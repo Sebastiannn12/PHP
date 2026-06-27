@@ -1,6 +1,6 @@
     body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #1a4d2e;
+            background: #1e4940;
             min-height: 100vh;
             padding: 20px;
             margin: 0;
@@ -18,7 +18,7 @@
 
         h2 {
             text-align: center;
-            color: #0f6b4f;
+            color: #1f322c;
             font-size: 32px;
             margin-bottom: 30px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -59,7 +59,7 @@
             padding: 14px;
             font-size: 18px;
             font-weight: 600;
-            background: #1e90ff;
+            background: #1a7b96;
             color: white;
             border: none;
             border-radius: 8px;
@@ -71,13 +71,50 @@
         }
 
         button:hover {
-            background: #1873cc;
+            background: #4d7822;
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(30, 144, 255, 0.4);
         }
 
         button:active {
             transform: translateY(0);
+        }
+
+        .button-row {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .btn,
+        .secondary-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .btn {
+            background: #1a7b96;
+        }
+
+        .secondary-btn {
+            background: #0f6b4f;
+        }
+
+        .btn:hover,
+        .secondary-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(30, 144, 255, 0.4);
         }
 
         .footer {

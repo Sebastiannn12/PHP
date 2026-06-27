@@ -1,75 +1,49 @@
-<?php
-
-$conn = mysqli_connect("localhost", "root", "", "dogdb");
-
-if (isset($_POST['save'])) {
-    $name = $_POST['name'];
-    $breed = $_POST['breed'];
-    $age = $_POST['age'];
-    $address = $_POST['address'];
-    $color = $_POST['color'];
-    $height = $_POST['height'];
-    $weight = $_POST['weight'];
-
-    $sql = "INSERT INTO dogs(name,breed,age,address,color,height,weight)
-            VALUES('$name','$breed','$age','$address','$color','$height','$weight')";
-
-    if (mysqli_query($conn, $sql)) {
-        echo "<script>alert('Dog information saved successfully!');</script>";
-    } else {
-        echo "<script>alert('Error saving data.');</script>";
-    }
-}
-
-?>
-
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>FA 6: Dog Information</title>
-    <link rel="stylesheet" type="text/css" href="dogRegister.css">
+    <title>Dog Information</title>
+    <link rel="stylesheet" href="dogRegister.css">
 </head>
 
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <h2>Dog Information</h2>
+<div class="button-row top-row">
+    <button type="button" class="secondary-btn" onclick="history.back();">Back</button>
+</div>
 
-        <form method="POST">
+<h2>Dog Information</h2>
 
-            <label>Name</label>
-            <input type="text" name="name" required>
+<form action="managingDog_form.php" method="POST">
 
-            <label>Breed</label>
-            <input type="text" name="breed" required>
+<label>Name</label>
+<input type="text" name="name" required>
 
-            <label>Age</label>
-            <input type="text" name="age" required>
+<label>Breed</label>
+<input type="text" name="breed" required>
 
-            <label>Address</label>
-            <input type="text" name="address" required>
+<label>Age</label>
+<input type="text" name="age" required>
 
-            <label>Color</label>
-            <input type="text" name="color" required>
+<label>Address</label>
+<input type="text" name="address" required>
 
-            <label>Height</label>
-            <input type="text" name="height" required>
+<label>Color</label>
+<input type="text" name="color" required>
 
-            <label>Weight</label>
-            <input type="text" name="weight" required>
+<label>Height</label>
+<input type="text" name="height" required>
 
-            <button type="submit" name="save">Save</button>
+<label>Weight</label>
+<input type="text" name="weight" required>
 
-        </form>
+<button type="submit" name="save">Save</button>
 
-        <div class="footer">
-           
-        </div>
+</form>
 
-    </div>
+</div>
 
 </body>
-
 </html>

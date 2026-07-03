@@ -16,7 +16,7 @@ require("includes/header.php");
             <div class="mb-4">
                 <p class="section-tag mb-2">PHP with MySQL</p>
                 <h2 class="fw-bold">Create a Database Account</h2>
-                <p class="text-secondary mb-0">This registration saves the user information into the MySQL database.</p>
+                <p class="text-secondary mb-0">This registration saves the user information.</p>
             </div>
 
             <?php if ($success === "registered"): ?>

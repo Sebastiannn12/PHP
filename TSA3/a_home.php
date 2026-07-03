@@ -18,7 +18,7 @@ require "includes/header.php";
         <div class="card-body p-4 p-md-5 text-center">
             <p class="section-tag mb-2">Active Session</p>
             <h2 class="display-5 fw-bold">Welcome, <?php echo htmlspecialchars($_SESSION["username"]); ?>!</h2>
-            <p class="text-secondary mb-0">You are logged in using the static Activity A account.</p>
+            <p class="text-secondary mb-0">You are logged in temporary.</p>
 
             <div class="mt-4">
                 <a class="btn custom-primary-btn" href="a_logout.php">Logout</a>

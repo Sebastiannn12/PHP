@@ -26,9 +26,9 @@ require "includes/header.php";
     <section class="card form-card narrow-panel mx-auto">
         <div class="card-body p-4 p-md-5">
             <div class="mb-4">
-                <p class="section-tag mb-2">MySQL Account</p>
+                <p class="section-tag mb-2">My Registered Account</p>
                 <h2 class="fw-bold">Login to Your Account</h2>
-                <p class="text-secondary mb-0">Use the username and password you saved during Activity B registration.</p>
+                <p class="text-secondary mb-0">Use the username and password you saved during registration.</p>
             </div>
 
             <?php if ($error === "invalid"): ?>

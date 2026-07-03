@@ -42,7 +42,7 @@ require "includes/header.php";
             <h2 class="fw-bold">Welcome, <?php echo htmlspecialchars($fullName); ?>!</h2>
 
             <p class="text-secondary">
-                You are logged in using an account saved from the MySQL database.
+                You are logged in using an account registered.
             </p>
 
             <div class="row g-3 mt-4 user-details">
@@ -55,7 +55,7 @@ require "includes/header.php";
                 <div class="col-md-6">
                     <div class="detail-box">
                         <span>Username</span>
-                        <strong><?php echo htmlspecialchars($username); ?></strong>
+                        <strong><?php echo ($username); ?></strong>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -67,7 +67,7 @@ require "includes/header.php";
                 <div class="col-md-6">
                     <div class="detail-box">
                         <span>Email</span>
-                        <strong><?php echo htmlspecialchars($email); ?></strong>
+                        <strong><?php echo($email); ?></strong>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -86,48 +86,48 @@ require "includes/header.php";
     </section>
 
     <?php if ($showResetPassword): ?>
-    <section class="card form-card mx-auto mt-4" id="reset-password">
-        <div class="card-body p-4 p-md-5">
-            <p class="section-tag mb-2">Account Security</p>
-            <h2 class="fw-bold">Reset Password</h2>
-            <p class="text-secondary">Enter your old password before saving a new one.</p>
+        <section class="card form-card mx-auto mt-4" id="reset-password">
+            <div class="card-body p-4 p-md-5">
+                <p class="section-tag mb-2">Account Security</p>
+                <h2 class="fw-bold">Reset Password</h2>
+                <p class="text-secondary">Enter your old password before saving a new one.</p>
 
-            <?php if ($success === "updated"): ?>
-                <p class="alert alert-success fw-bold">Password reset successfully.</p>
-            <?php endif; ?>
+                <?php if ($success === "updated"): ?>
+                    <p class="alert alert-success fw-bold">Password reset successfully.</p>
+                <?php endif; ?>
 
-            <?php if ($error === "current"): ?>
-                <p class="alert alert-danger fw-bold">Current password is not the same with the old password.</p>
-            <?php elseif ($error === "match"): ?>
-                <p class="alert alert-danger fw-bold">New password and Re-Enter new password should be the same.</p>
-            <?php elseif ($error === "empty"): ?>
-                <p class="alert alert-danger fw-bold">Please complete all password fields.</p>
-            <?php elseif ($error === "database"): ?>
-                <p class="alert alert-danger fw-bold">Database error. Please try again.</p>
-            <?php endif; ?>
+                <?php if ($error === "current"): ?>
+                    <p class="alert alert-danger fw-bold">Current password is not the same with the old password.</p>
+                <?php elseif ($error === "match"): ?>
+                    <p class="alert alert-danger fw-bold">New password and Re-Enter new password should be the same.</p>
+                <?php elseif ($error === "empty"): ?>
+                    <p class="alert alert-danger fw-bold">Please complete all password fields.</p>
+                <?php elseif ($error === "database"): ?>
+                    <p class="alert alert-danger fw-bold">Database error. Please try again.</p>
+                <?php endif; ?>
 
-            <form action="logic/b_resetPassword_process.php" method="POST">
-                <div class="mb-3">
-                    <label class="form-label fw-bold" for="current_password">Enter Current Password</label>
-                    <input class="form-control" type="password" id="current_password" name="current_password" required>
-                </div>
+                <form action="logic/b_resetPassword_process.php" method="POST">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold" for="current_password">Enter Current Password</label>
+                        <input class="form-control" type="password" id="current_password" name="current_password" required>
+                    </div>
 
-                <div class="mb-3">
-                    <label class="form-label fw-bold" for="new_password">Enter New Password</label>
-                    <input class="form-control" type="password" id="new_password" name="new_password" required>
-                </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold" for="new_password">Enter New Password</label>
+                        <input class="form-control" type="password" id="new_password" name="new_password" required>
+                    </div>
 
-                <div class="mb-3">
-                    <label class="form-label fw-bold" for="confirm_password">Re-Enter New Password</label>
-                    <input class="form-control" type="password" id="confirm_password" name="confirm_password" required>
-                </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold" for="confirm_password">Re-Enter New Password</label>
+                        <input class="form-control" type="password" id="confirm_password" name="confirm_password" required>
+                    </div>
 
-                <div class="d-flex justify-content-end mt-4">
-                    <button class="btn custom-primary-btn reset-btn" type="submit">Reset Password</button>
-                </div>
-            </form>
-        </div>
-    </section>
+                    <div class="d-flex justify-content-end mt-4">
+                        <button class="btn custom-primary-btn reset-btn" type="submit">Reset Password</button>
+                    </div>
+                </form>
+            </div>
+        </section>
     <?php endif; ?>
 </main>
 

@@ -7,9 +7,12 @@ require "../db.php";
  */
 
 $firstName = trim($_POST["first_name"] ?? "");
+$middleName = trim($_POST["middle_name"] ?? "");
 $lastName = trim($_POST["last_name"] ?? "");
 $email = trim($_POST["email"] ?? "");
 $username = trim($_POST["username"] ?? "");
+$birthday = trim($_POST["birthday"] ?? "");
+$contactNumber = trim($_POST["contact_number"] ?? "");
 $password = $_POST["password"] ?? "";
 $confirmPassword = $_POST["confirm_password"] ?? "";
 
@@ -31,9 +34,9 @@ if (mysqli_stmt_num_rows($checkStatement) > 0) {
 
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-$insertSql = "INSERT INTO users (first_name, last_name, email, username, password) VALUES (?, ?, ?, ?, ?)";
+$insertSql = "INSERT INTO users (first_name, middle_name, last_name, email, username, password, birthday, contact_number) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 $insertStatement = mysqli_prepare($conn, $insertSql);
-mysqli_stmt_bind_param($insertStatement, "sssss", $firstName, $lastName, $email, $username, $hashedPassword);
+mysqli_stmt_bind_param($insertStatement, "ssssssss", $firstName, $middleName, $lastName, $email, $username, $hashedPassword, $birthday, $contactNumber);
 
 if (mysqli_stmt_execute($insertStatement)) {
     header("Location: ../b_register.php?success=registered");

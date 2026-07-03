@@ -17,12 +17,12 @@ $newPassword = $_POST["new_password"] ?? "";
 $confirmPassword = $_POST["confirm_password"] ?? "";
 
 if ($currentPassword === "" || $newPassword === "" || $confirmPassword === "") {
-    header("Location: ../b_resetPassword.php?error=empty");
+    header("Location: ../b_home.php?reset=1&error=empty#reset-password");
     exit();
 }
 
 if ($newPassword !== $confirmPassword) {
-    header("Location: ../b_resetPassword.php?error=match");
+    header("Location: ../b_home.php?reset=1&error=match#reset-password");
     exit();
 }
 
@@ -33,7 +33,7 @@ mysqli_stmt_execute($selectStatement);
 mysqli_stmt_bind_result($selectStatement, $hashedPassword);
 
 if (!mysqli_stmt_fetch($selectStatement) || !password_verify($currentPassword, $hashedPassword)) {
-    header("Location: ../b_resetPassword.php?error=current");
+    header("Location: ../b_home.php?reset=1&error=current#reset-password");
     exit();
 }
 
@@ -45,10 +45,10 @@ $updateStatement = mysqli_prepare($conn, $updateSql);
 mysqli_stmt_bind_param($updateStatement, "si", $newHashedPassword, $userId);
 
 if (mysqli_stmt_execute($updateStatement)) {
-    header("Location: ../b_resetPassword.php?success=updated");
+    header("Location: ../b_home.php?reset=1&success=updated#reset-password");
     exit();
 }
 
-header("Location: ../b_resetPassword.php?error=database");
+header("Location: ../b_home.php?reset=1&error=database#reset-password");
 exit();
 ?>

@@ -1,12 +1,13 @@
 <?php
 session_start();
 
+require "logic/a_loginLogic.php";
+
 $pageTitle = "Activity A Login";
 $headerLabel = "Activity A";
 $headerTitle = "Login";
 
 require "includes/header.php";
-require ('logic/a_loginLogic.php');
 ?>
 
     <main class="container my-5">

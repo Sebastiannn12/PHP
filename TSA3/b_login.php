@@ -6,7 +6,14 @@ if (isset($_SESSION["b_user_id"])) {
     exit();
 }
 
+if (isset($_SESSION["username"])) {
+    header("Location: a_home.php");
+    exit();
+}
+
 $error = $_GET["error"] ?? "";
+$savedUsername = $_COOKIE["b_saved_username"] ?? "";
+$savedPassword = $_COOKIE["b_saved_password"] ?? "";
 
 $pageTitle = "Activity B Login";
 $headerLabel = "Activity B";
@@ -33,12 +40,38 @@ require "includes/header.php";
             <form action="logic/b_loginLogic.php" method="POST">
                 <div class="mb-3">
                     <label class="form-label fw-bold" for="username">Username</label>
-                    <input class="form-control" type="text" id="username" name="username" required>
+                    <input
+                        class="form-control"
+                        type="text"
+                        id="username"
+                        name="username"
+                        value="<?php echo htmlspecialchars($savedUsername); ?>"
+                        required
+                    >
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label fw-bold" for="password">Password</label>
-                    <input class="form-control" type="password" id="password" name="password" required>
+                    <input
+                        class="form-control"
+                        type="password"
+                        id="password"
+                        name="password"
+                        value="<?php echo htmlspecialchars($savedPassword); ?>"
+                        required
+                    >
+                </div>
+
+                <div class="form-check mb-4">
+                    <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="remember"
+                        name="remember"
+                        value="yes"
+                        <?php if ($savedUsername !== "" && $savedPassword !== "") echo "checked"; ?>
+                    >
+                    <label class="form-check-label" for="remember">Remember me</label>
                 </div>
 
                 <div class="d-flex justify-content-between gap-3 mt-4 form-actions">

@@ -1,12 +1,13 @@
 <?php
 session_start();
 
+require "b_registerlogic.php";
+
 $pageTitle = "Activity B Registration";
 $headerLabel = "Activity B";
 $headerTitle = "MySQL Registration";
 
 require("includes/header.php");
-require('b_registerlogic.php');
 ?>
 
 <main class="container my-5">
@@ -19,7 +20,7 @@ require('b_registerlogic.php');
             </div>
 
             <?php if ($success === "registered"): ?>
-                <p class="alert alert-success fw-bold">Registration successful. You can now login after we create the Activity B login page.</p>
+                <p class="alert alert-success fw-bold">Registration successful. You can now login.</p>
             <?php endif; ?>
 
             <?php if ($error === "password"): ?>
@@ -38,6 +39,11 @@ require('b_registerlogic.php');
                     </div>
 
                     <div class="col-md-6">
+                        <label class="form-label fw-bold" for="middle_name">Middle Name</label>
+                        <input class="form-control" type="text" id="middle_name" name="middle_name" required>
+                    </div>
+
+                    <div class="col-md-6">
                         <label class="form-label fw-bold" for="last_name">Last Name</label>
                         <input class="form-control" type="text" id="last_name" name="last_name" required>
                     </div>
@@ -53,6 +59,18 @@ require('b_registerlogic.php');
                     </div>
 
                     <div class="col-md-6">
+                        <label class="form-label fw-bold" for="birthday">Birthday</label>
+                        <input class="form-control" type="text" id="birthday" name="birthday" placeholder="January 30 1993" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold" for="contact_number">Contact Number</label>
+                        <input class="form-control" type="text" id="contact_number" name="contact_number" required>
+                    </div>
+
+                    <div class="col-12"></div>
+
+                    <div class="col-md-6">
                         <label class="form-label fw-bold" for="password">Password</label>
                         <input class="form-control" type="password" id="password" name="password" required>
                     </div>
@@ -61,6 +79,7 @@ require('b_registerlogic.php');
                         <label class="form-label fw-bold" for="confirm_password">Confirm Password</label>
                         <input class="form-control" type="password" id="confirm_password" name="confirm_password" required>
                     </div>
+
                 </div>
 
                 <div class="d-flex justify-content-between gap-3 mt-4 form-actions">

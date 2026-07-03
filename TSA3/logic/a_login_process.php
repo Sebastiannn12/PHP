@@ -18,7 +18,7 @@ if ($username === $staticUsername && $password === $staticPassword) {
         setcookie("saved_password", "", time() - 3600, "/");
     }
 
-    header("Location: ../home.php");
+    header("Location: ../a_home.php");
     exit();
 }
 

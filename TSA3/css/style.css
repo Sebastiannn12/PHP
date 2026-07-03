@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111827;
+    background: #f6f3ee !important;
+}
+
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #d8d1c7;
+}
+
+.site-header h1 {
+    font-weight: 700;
+}
+
+.logo-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background: #202124;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.small-label,
+.section-tag {
+    color: #0b7547;
+    font-weight: 700;
+}
+
+.intro-section {
+    max-width: 760px;
+}
+
+.intro-section .lead {
+    max-width: 680px;
+}
+
+.activity-list,
+.form-card,
+.result-card {
+    max-width: 900px;
+}
+
+.activity-card,
+.form-card,
+.result-card {
+    border: 1px solid #d8d1c7;
+    border-radius: 8px;
+    box-shadow: 0 16px 40px rgba(32, 33, 36, 0.08);
+}
+
+.activity-card,
+.result-card {
+    border-left: 8px solid #0f7d4d;
+}
+
+.activity-letter {
+    width: 52px;
+    height: 52px;
+    flex: 0 0 auto;
+    border-radius: 8px;
+    background: #0f7d4d;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.narrow-panel {
+    max-width: 560px;
+}
+
+.custom-primary-btn {
+    min-width: 118px;
+    padding: 13px 18px;
+    border: 1px solid #0f7d4d;
+    background: #0f7d4d;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.custom-primary-btn:hover {
+    border-color: #0b7547;
+    background: #0b7547;
+    color: #ffffff;
+}
+
+.custom-outline-btn {
+    min-width: 118px;
+    padding: 13px 18px;
+    border: 1px solid #0f7d4d;
+    background: #ffffff;
+    color: #0b7547;
+    font-weight: 700;
+}
+
+.custom-outline-btn:hover {
+    border-color: #0b7547;
+    background: #edf8f2;
+    color: #0b7547;
+}
+
+.custom-primary-btn:hover,
+.custom-outline-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 18px rgba(15, 125, 77, 0.18);
+}
+
+.form-control:focus,
+.form-check-input:focus {
+    border-color: #0f7d4d;
+    box-shadow: 0 0 0 0.25rem rgba(15, 125, 77, 0.2);
+}
+
+.form-check-input:checked {
+    background-color: #0f7d4d;
+    border-color: #0f7d4d;
+}
+
+.site-footer {
+    color: #4b5563;
+}
+
+@media (max-width: 576px) {
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+    }
+}

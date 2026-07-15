@@ -6,18 +6,13 @@
 
                 <div class="col-lg-6 mb-4">
 
-                    <div class="footer-brand">
-                        <img src="<?= $basepath ?>assets/images/encore-navbar-logo.png" class="footer-brand-logo" alt="Encore Music Store logo">
-                        <div>
-                            <h3 class="footer-logo">
-                                Encore Music Store
-                            </h3>
+                    <h3 class="footer-logo">
+                        Encore Music Store
+                    </h3>
 
-                            <p class="footer-tagline">
-                                Find Your Sound. Play Your Encore.
-                            </p>
-                        </div>
-                    </div>
+                    <p class="footer-tagline">
+                        Find Your Sound. Play Your Encore.
+                    </p>
 
                 </div>
 

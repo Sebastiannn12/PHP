@@ -1,15 +1,15 @@
 :root {
-  --color-charcoal: #0b1f3a;
-  --color-charcoal-soft: #12345b;
-  --color-ink: #172b4d;
-  --color-muted: #64748b;
-  --color-border: #dce8f5;
+  --color-charcoal: #171717;
+  --color-charcoal-soft: #242424;
+  --color-ink: #202020;
+  --color-muted: #717171;
+  --color-border: #e8e2d8;
   --color-surface: #ffffff;
-  --color-cream: #f4f8fc;
-  --color-gold: #007bff;
-  --color-gold-dark: #0056b3;
-  --shadow-soft: 0 18px 45px rgba(11, 61, 112, 0.1);
-  --shadow-card: 0 12px 32px rgba(11, 61, 112, 0.09);
+  --color-cream: #f8f5ef;
+  --color-gold: #b8893a;
+  --color-gold-dark: #8d6629;
+  --shadow-soft: 0 18px 45px rgba(23, 23, 23, 0.08);
+  --shadow-card: 0 12px 32px rgba(23, 23, 23, 0.07);
 }
 
 * {
@@ -18,14 +18,6 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-a {
-  color: var(--color-gold);
-}
-
-a:hover {
-  color: var(--color-gold-dark);
 }
 
 body {
@@ -41,10 +33,10 @@ body {
 }
 
 .navbar {
-  background-color: rgba(7, 31, 61, 0.97);
+  background-color: rgba(23, 23, 23, 0.96);
   backdrop-filter: blur(16px);
   padding: 15px 0;
-  border-bottom: 1px solid rgba(0, 123, 255, 0.35);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .navbar-brand {
@@ -61,26 +53,17 @@ body {
   width: 35px;
   height: 35px;
   place-items: center;
-  border: 1px solid rgba(0, 123, 255, 0.7);
+  border: 1px solid rgba(184, 137, 58, 0.65);
   border-radius: 50%;
   color: var(--color-gold);
   font-weight: 700;
 }
 
 .brand-logo {
-  width: auto;
-  height: 52px;
+  width: 38px;
+  height: 38px;
   object-fit: contain;
-  border-radius: 8px;
-}
-
-.brand-wordmark {
-  color: #ffffff;
-  font-size: 1.15rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  line-height: 1;
-  text-transform: uppercase;
+  border-radius: 50%;
 }
 
 .nav-link {
@@ -93,7 +76,7 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-  color: #66b2ff !important;
+  color: #ffffff !important;
 }
 
 .btn {
@@ -106,7 +89,7 @@ body {
   background-color: var(--color-gold);
   border: 1px solid var(--color-gold);
   color: #ffffff;
-  box-shadow: 0 10px 22px rgba(0, 123, 255, 0.2);
+  box-shadow: 0 10px 22px rgba(184, 137, 58, 0.18);
 }
 
 .btn-register:hover {
@@ -128,37 +111,12 @@ body {
   transform: translateY(-2px);
 }
 
-.btn-dark {
-  border-color: var(--color-gold);
-  background-color: var(--color-gold);
-  color: #ffffff;
-}
-
-.btn-dark:hover,
-.btn-dark:focus {
-  border-color: var(--color-gold-dark);
-  background-color: var(--color-gold-dark);
-  color: #ffffff;
-}
-
-.btn-outline-dark {
-  border-color: var(--color-gold);
-  color: var(--color-gold);
-}
-
-.btn-outline-dark:hover,
-.btn-outline-dark:focus {
-  border-color: var(--color-gold);
-  background-color: var(--color-gold);
-  color: #ffffff;
-}
-
 .landing-page {
   min-height: calc(100vh - 74px);
   display: flex;
   align-items: center;
   padding: 72px 0 56px;
-  background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #fbfaf7 100%);
 }
 
 .landing-subtitle,
@@ -245,10 +203,10 @@ body {
   width: min(230px, calc(100% - 56px));
   padding: 18px 20px;
   text-align: left;
-  border: 1px solid rgba(0, 123, 255, 0.22);
+  border: 1px solid rgba(184, 137, 58, 0.22);
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.88);
-  box-shadow: 0 12px 24px rgba(11, 61, 112, 0.1);
+  box-shadow: 0 12px 24px rgba(23, 23, 23, 0.08);
 }
 
 .hero-product-note span,
@@ -313,13 +271,13 @@ body {
   border: 1px solid var(--color-border);
   border-radius: 18px;
   background: #ffffff;
-  box-shadow: 0 0 0 rgba(11, 61, 112, 0);
+  box-shadow: 0 0 0 rgba(23, 23, 23, 0);
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
 .product-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(0, 123, 255, 0.42);
+  border-color: rgba(184, 137, 58, 0.42);
   box-shadow: var(--shadow-card);
 }
 
@@ -406,25 +364,6 @@ body {
   color: #ffffff;
 }
 
-.footer-brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.footer-brand-logo {
-  width: auto;
-  height: 86px;
-  flex: 0 0 auto;
-  object-fit: contain;
-  border-radius: 12px;
-}
-
-.footer-brand .footer-logo,
-.footer-brand .footer-tagline {
-  margin-bottom: 0;
-}
-
 .footer-tagline,
 .footer-bottom p,
 .footer-section p {
@@ -508,7 +447,7 @@ body {
 
 .about-hero-section {
   padding: 86px 0 76px;
-  background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #fbfaf7 100%);
 }
 
 .about-title {
@@ -606,9 +545,9 @@ body {
   padding: 78px 0;
   overflow: hidden;
   background:
-    radial-gradient(circle at top left, rgba(0, 123, 255, 0.18), transparent 34%),
-    radial-gradient(circle at bottom right, rgba(11, 61, 112, 0.1), transparent 32%),
-    linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+    radial-gradient(circle at top left, rgba(184, 137, 58, 0.18), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(23, 23, 23, 0.08), transparent 32%),
+    linear-gradient(180deg, #ffffff 0%, #fbfaf7 100%);
 }
 
 .auth-section::before,
@@ -624,7 +563,7 @@ body {
   height: 340px;
   top: 13%;
   left: 16%;
-  background: rgba(0, 123, 255, 0.2);
+  background: rgba(184, 137, 58, 0.22);
   filter: blur(35px);
 }
 
@@ -633,7 +572,7 @@ body {
   height: 300px;
   right: 17%;
   bottom: 14%;
-  background: rgba(11, 61, 112, 0.12);
+  background: rgba(23, 23, 23, 0.11);
   filter: blur(42px);
 }
 
@@ -655,7 +594,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.42);
-  box-shadow: 0 28px 70px rgba(11, 61, 112, 0.16);
+  box-shadow: 0 28px 70px rgba(23, 23, 23, 0.16);
   backdrop-filter: blur(28px) saturate(145%);
   -webkit-backdrop-filter: blur(28px) saturate(145%);
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
@@ -663,8 +602,8 @@ body {
 
 .auth-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(0, 123, 255, 0.32);
-  box-shadow: 0 30px 70px rgba(11, 61, 112, 0.15);
+  border-color: rgba(184, 137, 58, 0.32);
+  box-shadow: 0 30px 70px rgba(23, 23, 23, 0.15);
 }
 
 .auth-card h1,
@@ -693,8 +632,7 @@ body {
   font-weight: 600;
 }
 
-.auth-form .form-control,
-.auth-form .form-select {
+.auth-form .form-control {
   min-height: 52px;
   border-color: rgba(232, 226, 216, 0.9);
   border-radius: 14px;
@@ -703,11 +641,10 @@ body {
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
-.auth-form .form-control:focus,
-.auth-form .form-select:focus {
-  border-color: rgba(0, 123, 255, 0.7);
+.auth-form .form-control:focus {
+  border-color: rgba(184, 137, 58, 0.7);
   background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.12);
+  box-shadow: 0 0 0 0.2rem rgba(184, 137, 58, 0.12);
 }
 
 .auth-switch {

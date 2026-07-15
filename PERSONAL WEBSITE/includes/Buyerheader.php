@@ -35,8 +35,8 @@ $userRole = $_SESSION['user_role'] ?? 'guest';
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a href="<?= $basepath ?>index.php" class="navbar-brand">
-                <img src="<?= $basepath ?>assets/images/encore-navbar-logo.png" class="brand-logo" alt="Encore Music Store logo">
-                <span class="brand-wordmark">Encore</span>
+                <img src="<?= $basepath ?>assets/images/LOGOS.png" class="brand-logo" alt="Encore Music Store logo">
+                <span>Encore</span>
             </a>
 
             <button class="navbar-toggler"

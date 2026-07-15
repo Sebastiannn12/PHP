@@ -95,7 +95,7 @@ $error_message = $upload_errors[$_GET['error'] ?? ''] ?? '';
                             <?php while ($product = mysqli_fetch_assoc($products)): ?>
                                 <tr>
                                     <?php
-                                    $table_image = $product['image'] ?: 'encore-logo.png';
+                                    $table_image = $product['image'] ?: 'landing-image.png';
                                     $table_image_src = is_file(__DIR__ . '/../uploads/products/' . $table_image)
                                         ? '../uploads/products/' . rawurlencode($table_image)
                                         : '../assets/images/' . rawurlencode($table_image);

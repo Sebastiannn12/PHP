@@ -1,0 +1,19 @@
+# Uploaded files - ignore actual images but keep folder structure
+uploads/products/*
+uploads/profile/*
+
+# Keep the placeholder and access files
+!uploads/products/.gitkeep
+!uploads/products/.htaccess
+!uploads/profile/.gitkeep
+!uploads/profile/.htaccess
+
+# Dependencies
+vendor/
+
+# Environment / config
+.env
+
+# OS files
+.DS_Store
+Thumbs.db

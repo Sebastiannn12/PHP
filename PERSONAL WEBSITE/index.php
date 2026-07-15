@@ -47,7 +47,7 @@ require('includes/Buyerheader.php');
 
                 <div class="col-lg-6 text-center">
                     <div class="hero-product-showcase">
-                        <img src="assets/images/encore-logo.png"
+                        <img src="assets/images/landing-image.png"
                             class=   "landing-image img-fluid"
                             alt="Premium musical instruments at Encore Music Store">
                         <div class="hero-product-note">

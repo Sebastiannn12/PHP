@@ -47,7 +47,7 @@ require('../includes/Buyerheader.php');
             <div class="row g-4 products-grid">
                 <?php while ($product = mysqli_fetch_assoc($products)): ?>
                     <?php
-                    $productImage = $product['image'] ?: 'encore-logo.png';
+                    $productImage = $product['image'] ?: 'landing-image.png';
                     $productImageSrc = is_file(__DIR__ . '/../uploads/products/' . $productImage)
                         ? $basepath . 'uploads/products/' . rawurlencode($productImage)
                         : $basepath . 'assets/images/' . rawurlencode($productImage);

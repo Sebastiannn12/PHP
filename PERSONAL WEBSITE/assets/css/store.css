@@ -86,8 +86,8 @@
 
 .premium-search .form-control:focus,
 .premium-select:focus {
-  border-color: rgba(0, 123, 255, 0.6);
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.12);
+  border-color: rgba(184, 137, 58, 0.6);
+  box-shadow: 0 0 0 0.2rem rgba(184, 137, 58, 0.12);
 }
 
 .premium-select {
@@ -114,8 +114,8 @@
 
 .category-btn:hover,
 .category-btn.active {
-  border-color: var(--color-gold);
-  background: var(--color-gold);
+  border-color: var(--color-charcoal);
+  background: var(--color-charcoal);
   color: #ffffff;
 }
 

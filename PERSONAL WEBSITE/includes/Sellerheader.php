@@ -22,8 +22,8 @@ $sellerName = current_user_name();
 <body>
     <nav class="seller-navbar">
         <a href="dashboard.php" class="seller-brand">
-            <img src="../assets/images/encore-navbar-logo.png" class="seller-logo" alt="Encore Music Store logo">
-            <span class="seller-wordmark"><span>Encore</span><small>Seller</small></span>
+            <img src="../assets/images/LOGOS.png" class="seller-logo" alt="Encore Music Store logo">
+            <span>Encore Seller</span>
         </a>
 
         <div class="seller-nav-links">

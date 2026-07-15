@@ -24,7 +24,7 @@ require('includes/Buyerheader.php');
 
                 <div class="col-lg-5">
                     <div class="about-image-card">
-                        <img src="assets/images/encore-logo.png"
+                        <img src="assets/images/landing-image.png"
                             class="img-fluid"
                             alt="Encore Music Store premium instrument collection">
                     </div>
